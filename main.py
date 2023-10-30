@@ -28,5 +28,6 @@ async def ump(ctx):
   async for command in channel.slash_commands():
     if command.name == "bump":
        await command(channel)
+       await asyncio.sleep(10)
 
 bot.run(TOKEN)
