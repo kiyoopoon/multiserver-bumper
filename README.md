@@ -9,4 +9,6 @@ This bot is written in python using discord.py-self library.
 - How to host it?
 > There is no trusted site that hosts self-bots. But you can use replit and uptime robot but it will not stay online always you will need to monitor it. You can use PolyNode but I don't have that much exprerience using it!
 
-## Note: Self bots are against Discord TOS and we do not encourage you to use self bots. This project was just done for educational pourpose
+PolyNode - https://polynode.works/
+
+### Note: Self bots are against Discord TOS and we do not encourage you to use self bots. This project was just done for educational pourpose
