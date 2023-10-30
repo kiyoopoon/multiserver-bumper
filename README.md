@@ -5,6 +5,8 @@ This bot is written in python using discord.py-self library.
 
 **Note: Using this bot for more than 4 servers might cause some problems**
 
+Consider joining https://discord.gg/8C98Tqkspq if you want to support me!
+
 - How to configure it?
 
 First download the repo. Then go to the main.py file and replace `TOKEN` with your account token, then put your channel IDs in the `CHANNEL_IDS`. Finally change the `LOG_CHANNEL` with your log channel ID the bot will send the bump logs in that channel.
