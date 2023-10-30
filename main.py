@@ -1,12 +1,11 @@
 import asyncio
-
 from discord.ext.commands import Bot
 
 bot = Bot(command_prefix="b", self_bot=True, chunk_guilds_at_startup=False)
 
-TOKEN = "MTEwODY2NDU5NTA0NTk0OTU0MQ.GDrr87.4f48nIV46FKUhvc-7ZRjNbnr9LqFYXWvoRPcw8"
-LOG_CHANNEL = 1166688091642273883
-CHANNEL_IDS = [1063027190238818304, 1057293896801079416, 1150840909328552058, 1096798254437498920]
+TOKEN = "YOUR TOKEN"
+LOG_CHANNEL = "YOUR LOG CHANNEL" # Put the channel id without quotation marks
+CHANNEL_IDS = []
 
 @bot.event
 async def on_ready():
@@ -16,18 +15,21 @@ async def on_ready():
 
 async def auto():
     while True:
-        await asyncio.sleep(10)
+        await asyncio.sleep(7200)
         channels = CHANNEL_IDS
-        for channel in channels:
-          log_channel = bot.get_channel(LOG_CHANNEL)
-          await log_channel.send(f"## `Sent bump command to {channel.guild.name}`\n> `Server ID - {channel.guild.id}`\n> `Channel ID - {channel}`")
+        for channel_id in channels:
+            channel = bot.get_channel(channel_id)
+            if channel:
+                log_channel = bot.get_channel(LOG_CHANNEL)
+                await log_channel.send(f"```Sent bump command!\nChannel ID: {channel_id}```")
+                await channel.send("bump")
+                await asyncio.sleep(1200)
 
 @bot.command()
 async def ump(ctx):
-  channel = bot.get_channel(ctx.channel.id)
-  async for command in channel.slash_commands():
-    if command.name == "bump":
-       await command(channel)
-       await asyncio.sleep(10)
+    channel = bot.get_channel(ctx.channel.id)
+    async for command in channel.slash_commands():
+        if command.name == "bump":
+            await command.invoke(ctx)
 
 bot.run(TOKEN)
