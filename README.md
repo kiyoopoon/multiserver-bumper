@@ -1,5 +1,3 @@
-![Screenshot 2023-11-02 133736](https://github.com/kiyoopon/multiserver-bumper/assets/87245088/eb842b7b-205e-474a-a004-a26fb2972395)
-
 # Multiserver Auto Bump Bot
 
 **Note: Ignore the first error for now, I will update this code later and give it sometime if it doesn't send right bump command make sure only disboard is allowed in the bump channel but it should work with all bots. Keep it deployed it will send all bump command but will take a few hours to work properly**
@@ -24,3 +22,5 @@ There is no trusted site that hosts self-bots. But you can use replit and uptime
 PolyNode - https://polynode.works/
 
 ### Note: Self bots are against Discord TOS and we do not encourage you to use self bots. This project was just done for educational pourpose
+
+![Screenshot 2023-11-02 133736](https://github.com/kiyoopon/multiserver-bumper/assets/87245088/eb842b7b-205e-474a-a004-a26fb2972395)
