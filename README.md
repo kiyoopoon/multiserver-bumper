@@ -1,4 +1,5 @@
-![Uploading Screenshot 2023-11-02 133736.png…]()
+https://cdn.discordapp.com/attachments/1136318690099474432/1169541036427706388/Screenshot_2023-11-02_133736.png?ex=6555c6f8&is=654351f8&hm=57e9ca5cbe34207ece75fd5f28c6c68bed33121264ddbaf5601c5f72889267cb&
+
 # Multiserver Auto Bump Bot
 
 **Note: Ignore the first error for now, I will update this code later and give it sometime if it doesn't send right bump command make sure only disboard is allowed in the bump channel but it should work with all bots. Keep it deployed it will send all bump command but will take a few hours to work properly**
