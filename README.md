@@ -1,4 +1,4 @@
-https://cdn.discordapp.com/attachments/1136318690099474432/1169541036427706388/Screenshot_2023-11-02_133736.png?ex=6555c6f8&is=654351f8&hm=57e9ca5cbe34207ece75fd5f28c6c68bed33121264ddbaf5601c5f72889267cb&
+![Screenshot 2023-11-02 133736](https://github.com/kiyoopon/multiserver-bumper/assets/87245088/eb842b7b-205e-474a-a004-a26fb2972395)
 
 # Multiserver Auto Bump Bot
 
