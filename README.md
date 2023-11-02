@@ -1,3 +1,4 @@
+![Uploading Screenshot 2023-11-02 133736.png…]()
 # Multiserver Auto Bump Bot
 
 **Note: Ignore the first error for now, I will update this code later and give it sometime if it doesn't send right bump command make sure only disboard is allowed in the bump channel but it should work with all bots. Keep it deployed it will send all bump command but will take a few hours to work properly**
