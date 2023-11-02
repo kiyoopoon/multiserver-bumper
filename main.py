@@ -21,7 +21,7 @@ async def auto():
                 log_channel = bot.get_channel(LOG_CHANNEL)
                 await log_channel.send(f"```Sent bump command!\nChannel ID: {channel_id}```")
                 await channel.send("bump")
-                await asyncio.sleep(1200)  # wait after each message
+                await asyncio.sleep(1800)  # wait after each message
         await asyncio.sleep(7200)  # wait after each round of messages
 
 @bot.command()
