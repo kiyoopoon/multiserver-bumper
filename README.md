@@ -17,9 +17,10 @@ First download the repo. Then go to the main.py file and replace `TOKEN` with yo
 
 - How to host it?
 
-There is no trusted site that hosts self-bots. But you can use replit and uptime robot but it will not stay online always you will need to monitor it. You can use PolyNode but I don't have that much exprerience using it, so use at your own risk!
+There is no trusted site that hosts self-bots. But you can use replit and uptime robot but it will not stay online always you will need to monitor it. You can use PolyNode but I don't have that much exprerience using it, so use at your own risk! I recommend using a vps.
 
 PolyNode - https://polynode.works/
+( PolyNode might be down sometimes, keep an eye on their discord server to get updates )
 
 ## discord.py-self error
 If you installed discord.py-self library using pip you git get an error saying `API down` so I recommend you installing it from the github repo.
