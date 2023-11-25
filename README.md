@@ -21,6 +21,19 @@ There is no trusted site that hosts self-bots. But you can use replit and uptime
 
 PolyNode - https://polynode.works/
 
+## discord.py-self error
+If you installed discord.py-self library using pip you git get an error saying `API down` so I recommend you installing it from the github repo.
+
+```
+$ git clone https://github.com/dolfies/discord.py-self
+$ cd discord.py-self
+$ python3 -m pip install -U .
+```
+
+Run these command and it will install or replace your discord.py-self library. I ran into the issue but luckly there was this [issue here](https://github.com/dolfies/discord.py-self/issues/597) where I got the solve ot it.
+
+**Please not that discord.py-self library might break your original discord.py library so I recommend using codespace for testing**
+
 ### Note: Self bots are against Discord TOS and we do not encourage you to use self bots. This project was just done for educational pourpose
 
 ![Screenshot 2023-11-02 133736](https://github.com/kiyoopon/multiserver-bumper/assets/87245088/eb842b7b-205e-474a-a004-a26fb2972395)
