@@ -1,5 +1,6 @@
 import asyncio
 from discord.ext.commands import Bot
+from random import randint
 
 bot = Bot(command_prefix="b", self_bot=True, chunk_guilds_at_startup=False)
 
@@ -21,8 +22,8 @@ async def auto():
                 log_channel = bot.get_channel(LOG_CHANNEL)
                 await log_channel.send(f"```Sent bump command!\nChannel ID: {channel_id}```")
                 await channel.send("bump")
-                await asyncio.sleep(1800)  # wait after each message
-        await asyncio.sleep(7200)  # wait after each round of messages
+                await asyncio.sleep(randint(1800, 1820))  # wait after each message
+        await asyncio.sleep(randint(7200, 7220))  # wait after each round of messages
 
 @bot.command()
 async def ump(ctx):
