@@ -31,7 +31,7 @@ $ cd discord.py-self
 $ python3 -m pip install -U .
 ```
 
-Run these command and it will install or replace your discord.py-self library. I ran into the issue but luckly there was this [issue here](https://github.com/dolfies/discord.py-self/issues/597) where I got the solve ot it.
+Run these command and it will install or replace your discord.py-self library. I ran into the issue but luckly there was this [issue here](https://github.com/dolfies/discord.py-self/issues/597) where I got the solve to it.
 
 **Please not that discord.py-self library might break your original discord.py library so I recommend using codespace for testing**
 
