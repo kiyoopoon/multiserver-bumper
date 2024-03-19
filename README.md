@@ -2,7 +2,7 @@
 
 **Note: Ignore the first error for now, I will update this code later and give it sometime if it doesn't send right bump command make sure only disboard is allowed in the bump channel but it should work with all bots. Keep it deployed it will send all bump command but will take a few hours to work properly**
 
-🌠 - Consider giving a star if it helped you
+**🌠 - Consider giving a star if it helped you**
 
 Bump all your servers automatically. It will send bump messages to each server with a 20 min intreval between each bump.
 This bot is written in python using discord.py-self library.
