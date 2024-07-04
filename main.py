@@ -28,7 +28,8 @@ async def auto():
 @bot.command()
 async def ump(ctx):
     channel = bot.get_channel(ctx.channel.id)
-    async for command in channel.slash_commands():
+    application_commands = await channel.application_commands()
+    for command in application_commands:
         if command.name == "bump":
             await command(channel)
             await asyncio.sleep(60)
