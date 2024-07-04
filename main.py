@@ -17,8 +17,7 @@ async def auto():
     while True:
         channels = CHANNEL_IDS
         for channel_id in channels:
-            channel = bot.get_channel(channel_id)
-            if channel:
+            if channel := bot.get_channel(channel_id):
                 log_channel = bot.get_channel(LOG_CHANNEL)
                 await log_channel.send(f"```Sent bump command!\nChannel ID: {channel_id}```")
                 await channel.send("bump")
