@@ -30,7 +30,10 @@ async def ump(ctx):
     channel = bot.get_channel(ctx.channel.id)
     application_commands = await channel.application_commands()
     for command in application_commands:
-        if command.name == "bump":
+        if command.name == "bump" and (
+            command.application_id == 302050872383242240
+            or command.id == 1252409457757913260
+        ):
             await command(channel)
             await asyncio.sleep(60)
 
