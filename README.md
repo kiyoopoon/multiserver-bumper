@@ -97,8 +97,8 @@ This will install `discord.py-self``
 
 Now, just run `python3 main.py` or `python main.py` to run the script :)
 
-- Checking
-    > To check if your bot is running you can run the `?bing` command yes it's bing not ping :) 
+Checking
+> To check if your bot is running you can run the `?bing` command yes it's bing not ping :) 
 
 ## Common errors
 
