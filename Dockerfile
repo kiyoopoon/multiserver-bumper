@@ -7,8 +7,9 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . /app
 
-# pip packages
-RUN pip install git+https://github.com/ye4241/discord.py-self.git
+# Install discord.py-self
+RUN git clone https://github.com/dolfies/discord.py-self && \
+    python3 -m pip install -U ./discord.py-self
 
 # Run main.py when the container launches
 CMD ["python3", "main.py"]

@@ -1,84 +1,124 @@
+```markdown
 # Multi-server Auto Bump Bot
-~~**Note: Ignore the first error for now, I will update this code later and give it sometime if it doesn't send right bump command make sure only disboard is allowed in the bump channel but it should work with all bots. Keep it deployed it will send all bump command but will take a few hours to work properly**~~ [ Fixed ]
+
+~~**Note: Ignore the first error for now, I will update this code later and give it sometime if it doesn't send the right bump command. Make sure only Disboard is allowed in the bump channel, but it should work with all bots. Keep it deployed; it will send all bump commands but will take a few hours to work properly**~~ [ Fixed ]
 
 ### Consider giving a star if it helped you 🌠
-Bump all your servers automatically. It will send bump messages to each server with a 20 min interval between each bump.
-This bot is written in python using discord.py-self library.
 
-**Note: Using this bot for more than 4 servers might cause some problems**
+Bump all your servers automatically. It will send bump messages to each server with a 20-minute interval between each bump. This bot is written in Python using the `discord.py-self` library.
 
-**Consider joining https://discord.gg/8C98Tqkspq if you want to support me!**
+**Note: Using this bot for more than 4 servers might cause some problems.**
+
+**Wanna join my Discord server? [Join now!](https://discord.gg/8C98Tqkspq) :)**
+**I might have missed something or maybe documented something wrong, so feel free to contact me on Discord if you face any problem/something needs to be corrected or open an issue here! My Discord: `kiyoopoon` or you can also ping me in my server**
 
 ## How to configure it?
-First download the repo. Then go to the main.py file and replace `TOKEN` with your account token, then put your channel IDs in the `CHANNEL_IDS`. Finally change the `LOG_CHANNEL` with your log channel ID the bot will send the bump logs in that channel.
+1. First, download the repo.
+2. Go to the `main.py` file and replace `TOKEN` with your account token.
+3. Put your channel IDs in the `CHANNEL_IDS`.
+4. Change the `LOG_CHANNEL` with your log channel ID where the bot will send the bump logs.
 
-**Make sure you have python and discord.py-self installed if you want to do test run. But discord.py-self might break your regular discord.py lib**
+**Make sure you have Python and `discord.py-self` installed if you want to do a test run. Note that `discord.py-self` might break your regular `discord.py` library.**
 
 ## How to host it?
-There is no trusted site that hosts self-bots. But you can use replit and uptime robot but it will not stay online always you will need to monitor it. You can use PolyNode but I don't have that much experience using it, so use at your own risk! I recommend using a vps.
+There is no trusted site that hosts self-bots. However, you can use Replit and Uptime Robot, but it will not stay online always; you will need to monitor it. You can use PolyNode, but I don't have much experience with it, so use it at your own risk! I recommend using a VPS.
 
-PolyNode - https://polynode.works/
-( PolyNode might be down sometimes, keep an eye on their discord server to get updates )
+- [PolyNode](https://polynode.works/)
+(PolyNode might be down sometimes, keep an eye on their Discord server for updates.)
 
-## How to host it in a VPS?
-#### Easy way
-If you already have a VPS then you just get my docker files and use those to build the bot easily. I maintain this docker container regularly.
+## How to host it on a VPS?
 
-First install docker.
+### Easy way
+
+If you already have a VPS, you can use my Docker files to build a Docker container and the bot easily.
+
+First, install Docker.
 
 **Linux VPS**
 
-```
+```sh
 curl -fsSL https://get.docker.com -o install-docker.sh
 sh install-docker.sh --dry-run
 sudo sh install-docker.sh
 ```
 
-All the commands are from the official docker install guide - [get.docker.com](https://get.docker.com/)
+All the commands are from the official Docker install guide - [get.docker.com](https://get.docker.com/)
 
 **Windows VPS**
 
-If you have windows VPS then you just download the docker-cli
-Download the installer using the download button at the top of the page, or from the [release notes](https://docs.docker.com/desktop/release-notes/). Open the `Docker Desktop Installer.exe` and follow the normal installation steps. Here is the official installation guide for windows - [Install Docker Desktop on Windows](https://docs.docker.com/desktop/install/windows-install/)
+If you have a Windows VPS, download the Docker CLI:
+Download the installer using the download button at the top of the page, or from the [release notes](https://docs.docker.com/desktop/release-notes/). Open the `Docker Desktop Installer.exe` and follow the normal installation steps. Here is the official installation guide for Windows - [Install Docker Desktop on Windows](https://docs.docker.com/desktop/install/windows-install/)
 
-Run the command `docker version` to check if it's installed properly
+Run the command `docker version` to check if it's installed properly.
 
-After you have docker setup clone the repo, then cd inside the repo `cd multiserver-bumper`. Now you will need to build the docker container using `docker build -t multiserver-bumper`. Here the command uses the Dockerfile to build a new image, the `-t` flag tags your image which is `multiserver-bumper` in this case, and finally the `.` says that the Dockerfile is in the current folder. Wait for a while and after it's done run `docker run multiserver-bumper`. Done! Your self-bot should be online now :)
+After you have Docker set up, clone the repo, then navigate inside the repo `cd multiserver-bumper`. Now you will need to build the Docker container using `docker build -t multiserver-bumper .`. This command uses the Dockerfile to build a new image. The `-t` flag tags your image, which is `multiserver-bumper` in this case, and the `.` specifies that the Dockerfile is in the current folder. Wait for a while, and after it's done, run `docker run multiserver-bumper`. Done! Your self-bot should be online now :)
 
-#### Manual way
-If you don't want the docker way then you can go with the manual setup. First you will need to make sure you have the `venv` or `virtualenv` installed. Run `python3 -m venv --help` to check, if you don't have it installed then install it with this command
-- For **linux** `sudo apt install python3-venv` [ Will install it globally, might face `externally-managed-environment` issue if you use `pip install virtualenv` ] or,
-- For **windows** `pip install virtualenv`
+### Manual way
 
-After you have `venv` setup. You can now make the virtual environment run `python<version> -m venv <virtual-environment-name>` for example if you have `python version 3.12` and you want to name the virtual env `multiserver-bumper` then your command will be something like `python3.12 -m venv multiserver-bumper`. Use `python --version` to check your python versions.
+If you don't want to use Docker, you can go with the manual setup. First, ensure you have `venv` or `virtualenv` installed. Run `python3 -m venv --help` to check. If you don't have it installed, then install it with this command:
 
-Now we need to activate the virtual environment using this command
-- For Unix/Linux based OS `source env/bin/activate`
-- For Windows `env/Scripts/activate.bat`
+- For **Linux**:
+  ```sh
+  sudo apt install python3-venv
+  ```
+  This will install it globally. You might face the `externally-managed-environment` issue if you use `pip install virtualenv`.
+  
+- For **Windows**:
+  ```
+  pip install virtualenv
+  ```
 
-Finally we now have our virtual environment so we can run `pip install -r requirements.txt` to install the discord.py-self [ Need the github version cause it's updated one ]
+After you have `venv` set up, create the virtual environment by running:
+```sh
+python<version> -m venv <virtual-environment-name>
+```
+For example, if you have Python version 3.12 and you want to name the virtual environment `multiserver-bumper`, then your command will be:
+```sh
+python3.12 -m venv multiserver-bumper
+```
+Use `python --version` to check your Python version.
 
-Now just run `python3 main.py` or `python main.py` to run the script :)
+Now, activate the virtual environment using this command:
+- For Unix/Linux-based OS:
+  ```sh
+  source multiserver-bumper/bin/activate
+  ```
+- For Windows:
+  ```
+  multiserver-bumper\Scripts\activate.bat
+  ```
+Replace `multiserver-bumper` with your virtual environment name.
+
+Finally, install the required packages by running:
+```sh
+pip install -r requirements.txt
+```
+This will install `discord.py-self``
+**Important Note: You need the GitHub version because it's the updated one. The PyPI one is outdated!**
+
+Now, just run `python3 main.py` or `python main.py` to run the script :)
+
+- Checking
+    > To check if your bot is running you can run the `?bing` command yes it's bing not ping :) 
 
 ## Common errors
-#### discord.py-self error
-If you installed discord.py-self library using pip you git get an error saying `API down` so I recommend you installing it from the github repo.
 
-```
-git clone https://github.com/dolfies/discord.py-self
+### discord.py-self error [ Fixed ]
+~~If you installed the `discord.py-self` library using pip, you might get an error saying `API down`. I recommend installing it from a GitHub fork as it was fixed there.
+
+```sh
+git clone https://github.com/ye4241/discord.py-self
 cd discord.py-self
 python3 -m pip install -U .
 ```
+Run these commands and it will install or replace your `discord.py-self` library. I ran into the issue but luckily found the solution [here](https://github.com/dolfies/discord.py-self/issues/597).~~
 
-Run these command and it will install or replace your discord.py-self library. I ran into the issue but luckily there was this [issue here](https://github.com/dolfies/discord.py-self/issues/597) where I got the solve to it.
+### DeprecationWarning [ Fixed ]
+~~If you get this error `DeprecationWarning: slash_commands is deprecated, use Messageable.application_commands instead.` after running the bot, don't worry, it will still work, so just ignore it.~~
 
-#### DeprecationWarning
-If you get this error `DeprecationWarning: slash_commands is deprecated, use Messageable.application_commands instead.` after running the bot. Don't worry it will still work so just ignore it.
+**To avoid issues, I recommend using the Docker container to ensure consistency. Feel free to contact me on Discord or open an issue if you need any help. Contributions and PRs are also welcome!**
 
-**To avoid all the issues I recommend you go with the docker container so that everything stays the same. Feel free to contact me on Discord or open an issue if you need any other help**
-
-**Please not that discord.py-self library might break your original discord.py library so I recommend using codespace for testing**
-
-### Note: `Self bots are against Discord TOS and we do not encourage you to use self bots. This project was just done for educational purpose`
+**Please note that using self-bots is against Discord TOS, and we do not encourage you to use self-bots. This project was done for educational purposes only ;)**
 
 ![Preview](https://i.ibb.co/HrXrP0S/image-2.png)
+```
