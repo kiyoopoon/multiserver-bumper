@@ -1,4 +1,3 @@
-```markdown
 # Multi-server Auto Bump Bot
 
 ~~**Note: Ignore the first error for now, I will update this code later and give it sometime if it doesn't send the right bump command. Make sure only Disboard is allowed in the bump channel, but it should work with all bots. Keep it deployed; it will send all bump commands but will take a few hours to work properly**~~ [ Fixed ]
@@ -121,4 +120,3 @@ Run these commands and it will install or replace your `discord.py-self` library
 **Please note that using self-bots is against Discord TOS, and we do not encourage you to use self-bots. This project was done for educational purposes only ;)**
 
 ![Preview](https://i.ibb.co/HrXrP0S/image-2.png)
-```
