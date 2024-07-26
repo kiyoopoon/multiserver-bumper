@@ -9,6 +9,7 @@ Bump all your servers automatically. It will send bump messages to each server w
 **Note: Using this bot for more than 4 servers might cause some problems.**
 
 **Wanna join my Discord server? [Join now!](https://discord.gg/8C98Tqkspq) :)**
+
 **I might have missed something or maybe documented something wrong, so feel free to contact me on Discord if you face any problem/something needs to be corrected or open an issue here! My Discord: `kiyoopoon` or you can also ping me in my server**
 
 ## How to configure it?
@@ -20,7 +21,7 @@ Bump all your servers automatically. It will send bump messages to each server w
 **Make sure you have Python and `discord.py-self` installed if you want to do a test run. Note that `discord.py-self` might break your regular `discord.py` library.**
 
 ## How to host it?
-There is no trusted site that hosts self-bots. However, you can use Replit and Uptime Robot, but it will not stay online always; you will need to monitor it. You can use PolyNode, but I don't have much experience with it, so use it at your own risk! I recommend using a VPS.
+I don't know any trusted site that hosts self-bots. However, you can use Replit and Uptime Robot, but it will not stay online always; you will need to monitor it. You can use PolyNode, but I don't have much experience with it, so use it at your own risk! I recommend using a VPS.
 
 - [PolyNode](https://polynode.works/)
 (PolyNode might be down sometimes, keep an eye on their Discord server for updates.)
@@ -97,20 +98,22 @@ This will install `discord.py-self``
 
 Now, just run `python3 main.py` or `python main.py` to run the script :)
 
-Checking
-> To check if your bot is running you can run the `?bing` command yes it's bing not ping :) 
+
+### Checking
+To check if your bot is running you can run the `?bing` command yes it's bing not ping :) 
 
 ## Common errors
 
 ### discord.py-self error [ Fixed ]
-~~If you installed the `discord.py-self` library using pip, you might get an error saying `API down`. I recommend installing it from a GitHub fork as it was fixed there.
+~~If you installed the `discord.py-self` library using pip, you might get an error saying `API down`. I recommend installing it from a GitHub fork as it was fixed there.~~
 
-```sh
+~~`
 git clone https://github.com/ye4241/discord.py-self
 cd discord.py-self
 python3 -m pip install -U .
-```
-Run these commands and it will install or replace your `discord.py-self` library. I ran into the issue but luckily found the solution [here](https://github.com/dolfies/discord.py-self/issues/597).~~
+`~~
+
+~~Run these commands and it will install or replace your `discord.py-self` library. I ran into the issue but luckily found the solution [here](https://github.com/dolfies/discord.py-self/issues/597).~~
 
 ### DeprecationWarning [ Fixed ]
 ~~If you get this error `DeprecationWarning: slash_commands is deprecated, use Messageable.application_commands instead.` after running the bot, don't worry, it will still work, so just ignore it.~~
