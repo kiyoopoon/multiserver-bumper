@@ -93,7 +93,7 @@ Finally, install the required packages by running:
 ```sh
 pip install -r requirements.txt
 ```
-This will install `discord.py-self``
+This will install `discord.py-self`
 **Important Note: You need the GitHub version because it's the updated one. The PyPI one is outdated!**
 
 Now, just run `python3 main.py` or `python main.py` to run the script :)
