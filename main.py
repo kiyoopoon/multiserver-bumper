@@ -16,22 +16,29 @@ async def on_ready():
 async def auto():
     while True:
         channels = CHANNEL_IDS
+        total_channels = len(channels)
+        
+        # Loop through each channel to bump
         for channel_id in channels:
             if channel := bot.get_channel(channel_id):
                 if LOG_CHANNEL:
                     log_channel = bot.get_channel(LOG_CHANNEL)
                     await log_channel.send(f"```Sent bump command!\nChannel ID: {channel_id}\nGuild: {channel.guild}```")
+                
                 await channel.send("?bump")
-                await asyncio.sleep(randint(1800, 1820)) # wait after each message
-        await asyncio.sleep(randint(7200, 7220)) # wait after each round of messages
+                await asyncio.sleep(randint(1800, 1820))  # Wait for 30 minutes between each bump
+        
+        # Calculate remaining time to ensure the total time for one round is 2 hours (7200 seconds) [ I am not sure if this will work or not I will test and add a better fix ]
+        total_bump_time = 1800 * total_channels  # Total time spent bumping all channels
+        remaining_time = max(0, 7200 - total_bump_time)  # Remaining time to make the total 2 hours
+        
+        await asyncio.sleep(remaining_time)
 
 @bot.command()
 async def bump(ctx):
     channel = bot.get_channel(ctx.channel.id)
     application_commands = await channel.application_commands()
     for command in application_commands:
-        # Note: With these conditions it will only send the Disboard bump command if you want it to send other bump commands too you may remove the other conditions. Something like `if command.name == "bump":` but it might not work properly always! Also different bots have different cool down times.
-        
         if command.name == "bump" and (
             command.application_id == 302050872383242240
             or command.id == 1252409457757913260
